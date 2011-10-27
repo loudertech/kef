@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+
+  <?php
+
+  	echo Tag::getDocumentTitle();
+
+  	Tag::stylesheetLink('style');
+	echo Tag::stylesheetLinkTags();
+
+	Tag::addJavascript('core/base-source');
+	Tag::addJavascriptFramework('jquery');
+	echo Tag::getJavascriptLocation();
+	echo Tag::javascriptSources();
+
+  ?>
+ </head>
+ <body>
+  <?php View::getContent(); ?>
+ </body>
+</html>
