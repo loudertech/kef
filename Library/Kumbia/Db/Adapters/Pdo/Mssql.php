@@ -236,6 +236,9 @@ class DbPdoMsSQL extends DbPDO {
 		return $this->fetchAll("SELECT name FROM sysobjects WHERE type = 'U' ORDER BY name");
 	}
 
+	public function createTable($table, $definition, $index=array()){
+	}
+
 	/**
 	 * Listar los campos de una tabla
 	 *
