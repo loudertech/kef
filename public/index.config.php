@@ -19,8 +19,17 @@
  * @version 	$Id: index.php,v c4aa3976a4aa 2011/08/03 06:05:30 andres $
  */
 
+
 //Path donde la aplicación está instalada
-define('KEF_ABS_PATH', getcwd().'/');
+
+//Ubuntu Apache2
+define('KEF_ABS_PATH', '/var/www/kef/');
+
+//OpenSuse Apache2
+//define('KEF_ABS_PATH', '/srv/www/htdocs/kef/');
+
+//Win XAMP
+//define('KEF_ABS_PATH', 'C:\xamp\htdocs\kef\');
 
 //Indica si se debe usar el framework rápido ó el de debug
 define('KEF_OFAST', false);

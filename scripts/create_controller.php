@@ -20,6 +20,10 @@
  * @version 	$Id: create_controller.php,v b9cc10ddf716 2011/10/19 23:38:16 andres $
  */
 
+//Establece tipo de notificacion de errores
+error_reporting(E_ALL | E_NOTICE | E_STRICT);
+
+require 'public/index.config.php';
 require 'Library/Kumbia/Core/ClassPath/CoreClassPath.php';
 require 'Library/Kumbia/Autoload.php';
 

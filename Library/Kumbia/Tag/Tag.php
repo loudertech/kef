@@ -575,12 +575,17 @@ abstract class Tag {
 	public static function numericPasswordField($params){
 		$numberArguments = func_num_args();
 		$params = Utils::getParams(func_get_args(), $numberArguments);
-		$value = self::getValueFromAction($params);
 		if(!isset($params[0])||!$params[0]) {
 			$params[0] = $params['id'];
 		}
 		if(!isset($params['name'])||!$params['name']){
 			$params['name'] = $params[0];
+		}
+		if(isset($params['value'])){
+			$value = $params['value'];
+			unset($params['value']);
+		} else {
+			$value = self::getValueFromAction($params[0]);
 		}
 		if(!$value) {
 			$value = isset($params['value']) ? $params['value'] : "";
