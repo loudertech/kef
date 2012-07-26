@@ -3,7 +3,7 @@
 class ControllerBase {
 
 	public function init(){
-		Core::info();
+		//Core::info();
 	}
 
 }
