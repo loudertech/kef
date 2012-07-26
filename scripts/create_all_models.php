@@ -187,9 +187,9 @@ class CreateAllModels extends Script {
 					'application' => $application,
 					'schema' => $schema,
 					'force' => $forceProcess,
-					'hasMany' => $hasMany[$name],
-					'belongsTo' => $belongsTo[$name],
-					'foreignKeys' => $foreignKeys[$name]
+					'hasMany' => @$hasMany[$name],
+					'belongsTo' => @$belongsTo[$name],
+					'foreignKeys' => @$foreignKeys[$name]
 				));
 				$modelBuilder->build();
 			} else {
